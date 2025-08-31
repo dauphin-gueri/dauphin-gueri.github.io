@@ -3,72 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Page d'Accueil</title>
+    <title>Notre Mariage – [Prénoms]</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #555;
             max-width: 800px;
             margin: auto;
             padding: 20px;
+            background-color: #f9f9f9;
         }
         header {
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0;
+            background-color: #fff;
             border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #f4f4f4;
-            padding: 10px;
+        h1, h2 {
+            color: #8a6b6b;
         }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
+        .date {
+            font-style: italic;
+            color: #a38f8f;
         }
         section {
-            padding: 20px 0;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .lieu {
+            margin-bottom: 15px;
+        }
+        .lieu h3 {
+            margin-top: 0;
+            color: #8a6b6b;
+        }
+        .map {
+            height: 300px;
+            width: 100%;
+            margin: 15px 0;
+            border: 0;
+            border-radius: 5px;
         }
         footer {
             text-align: center;
             padding: 20px 0;
-            border-top: 1px solid #eee;
-            margin-top: 20px;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        .hebergement-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .hebergement-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .hebergement-list li:last-child {
+            border-bottom: none;
+        }
+        a {
+            color: #8a6b6b;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur ma page GitHub</h1>
-        <p>Un exemple de page d'accueil pour GitHub Pages</p>
+        <h1>[Prénom 1] & [Prénom 2]</h1>
+        <p class="date">Samedi 12 septembre 2026</p>
     </header>
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="accueil">
-        <h2>À propos</h2>
-        <p>Bonjour ! Je m'appelle [Ton Prénom]. Cette page présente mes projets et mes centres d'intérêt.</p>
+
+    <section id="ceremonie">
+        <h2>Cérémonie</h2>
+        <div class="lieu">
+            <h3>Mairie de [Ville]</h3>
+            <p>Adresse : [Adresse complète]</p>
+            <p>Heure : [Heure]</p>
+            <!-- Remplace l'URL ci-dessous par un lien Google Maps vers le lieu -->
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=..." allowfullscreen></iframe>
+        </div>
     </section>
-    <section id="projets">
-        <h2>Mes Projets</h2>
-        <ul>
-            <li><a href="https://github.com/mon-username/mon-projet-1">Mon Projet 1</a></li>
-            <li><a href="https://github.com/mon-username/mon-projet-2">Mon Projet 2</a></li>
+
+    <section id="reception">
+        <h2>Réception</h2>
+        <div class="lieu">
+            <h3>[Nom du lieu de réception]</h3>
+            <p>Adresse : [Adresse complète]</p>
+            <p>Heure : [Heure]</p>
+            <!-- Remplace l'URL ci-dessous par un lien Google Maps vers le lieu -->
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=..." allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="hebergement">
+        <h2>Où se loger ?</h2>
+        <p>Voici quelques suggestions d’hébergement à proximité :</p>
+        <ul class="hebergement-list">
+            <li>
+                <h3>[Nom Hôtel 1]</h3>
+                <p>Adresse : [Adresse]</p>
+                <p>Tél : [Numéro]</p>
+                <p><a href="[Lien site web]" target="_blank">Site web</a></p>
+            </li>
+            <li>
+                <h3>[Nom Hôtel 2]</h3>
+                <p>Adresse : [Adresse]</p>
+                <p>Tél : [Numéro]</p>
+                <p><a href="[Lien site web]" target="_blank">Site web</a></p>
+            </li>
+            <li>
+                <h3>[Nom Hôtel 3]</h3>
+                <p>Adresse : [Adresse]</p>
+                <p>Tél : [Numéro]</p>
+                <p><a href="[Lien site web]" target="_blank">Site web</a></p>
+            </li>
         </ul>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Tu peux me contacter via <a href="mailto:mon.email@example.com">mon.email@example.com</a>.</p>
-    </section>
+
     <footer>
-        <p>&copy; 2025 Mon Nom. Tous droits réservés.</p>
+        <p>Pour toute question, contactez-nous : <a href="mailto:contact@notremariage.com">contact@notremariage.com</a></p>
     </footer>
 </body>
 </html>
