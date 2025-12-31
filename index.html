@@ -1,191 +1,240 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariage Antoine et Juliette</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
-        body {
-            font-family: 'Baskervville','Georgia', serif;
-            font-weight: 400;
-            font-style: normal;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #6a9b6e; /* Vert clair et naturel */
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f1f9f1; /* Fond très clair, doux */
-        }
-        header {
-            text-align: center;
-            padding: 30px 0;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 30px;
-            position: relative;
-            background-image: url('https://via.placeholder.com/1200x400/CCE6CC/FFFFFF?text=Mariage'); /* Exemple d'image d'arrière-plan */
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/vintage/1200x630/42');
             background-size: cover;
             background-position: center;
-        }
-        header h1, header p {
-            color: #6a9b6e;
-        }
-        header .date {
-            font-style: italic;
-            color: #8d9c77; /* Légèrement plus foncé pour la date */
-        }
-        header img {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        h1, h2 {
-            color: #6a9b6e; /* Vert clair */
-        }
-        section {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .lieu {
-            margin-bottom: 15px;
-        }
-        .lieu h3 {
-            margin-top: 0;
-            color: #6a9b6e;
-        }
-        .map {
-            height: 300px;
-            width: 100%;
-            margin: 15px 0;
-            border: 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-            color: #8d9c77; /* Vert foncé pour le texte du footer */
-            font-size: 0.9em;
-        }
-        .list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .list li {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        .list li:last-child {
-            border-bottom: none;
-        }
-        a {
-            color: #6a9b6e;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .list li h3 {
-            color: #6a9b6e;
-        }
-        /* Animation de survol des liens */
-        a:hover {
-            color: #4c8d4b;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Mariage Antoine et Juliette</h1>
-        <p class="date">Samedi 27 Juin 2026</p>
-        <img src="https://via.placeholder.com/1200x250/CCE6CC/FFFFFF?text=Nos+joies+partagées" alt="Image de mariage">
-    </header>
-
-    <section id="ceremonie">
-        <h2>Cérémonie</h2>
-        <div class="lieu">
-            <h3>Église Notre-Dame de l'Assomption</h3>
-            <p>Adresse : Rue du Château Montastruc, 24520 Lamonzie-Montastruc</p>
-            <p>17h</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36585.37461915051!2d0.5788454202182521!3d44.905614335188446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aad7000d3ff089%3A0x802a0398d776b942!2s%C3%89glise%20Notre-Dame%20de%20l&#39;Assomption!5e0!3m2!1sfr!2sfr!4v1767183837978!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<body class="font-serif bg-rose-50">
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex flex-col justify-center items-center text-white text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Antoine & Juliette</h1>
+        <p class="text-2xl md:text-3xl mb-8">15 Juin 2024</p>
+        <div class="flex space-x-4">
+            <a href="#reception" class="px-6 py-3 bg-white text-rose-600 rounded-full font-medium hover:bg-rose-100 transition">Informations</a>
+            <a href="#activities" class="px-6 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-rose-600 transition">Activités</a>
         </div>
     </section>
 
-    <section id="reception">
-        <h2>Réception</h2>
-        <div class="lieu">
-            <h3>La Tissanderie</h3>
-            <p>Adresse : La Tissanderie, Liorac-sur-Louyre, 24520</p>
-            <p>Heure : 18h</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d136105.92435971258!2d0.5685676851204634!3d45.00114387439279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ab297e52c1d9f5%3A0xdae5ed753b53b952!2sLa%20Tissanderie%20-%20Location%20de%20vacances%20de%20charme!5e1!3m2!1sfr!2sfr!4v1756658926070!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Reception Section -->
+    <section id="reception" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-rose-800 mb-4">Informations de Réception</h2>
+            <div class="w-24 h-1 bg-rose-400 mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-2xl font-semibold text-rose-700 mb-4">Cérémonie & Dîner</h3>
+                <p class="text-gray-700 mb-6">Nous serions ravis de vous accueillir pour célébrer notre union le samedi 15 juin 2024 à partir de 16h.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="text-rose-600 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-gray-900">Lieu</h4>
+                            <p class="text-gray-600">Château de la Vallée, 123 Rue des Roses, 75000 Paris</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="text-rose-600 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-gray-900">Horaire</h4>
+                            <p class="text-gray-600">16h00 - Cérémonie<br>18h30 - Cocktail<br>20h00 - Dîner & Soirée dansante</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="mail" class="text-rose-600 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-gray-900">RSVP</h4>
+                            <p class="text-gray-600">Merci de confirmer votre présence avant le 1er mai 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <img src="http://static.photos/vintage/640x360/23" alt="Château de la Vallée" class="w-full h-auto rounded-lg mb-6">
+                <div class="text-center">
+                    <a href="#" class="inline-block px-6 py-3 bg-rose-600 text-white rounded-full hover:bg-rose-700 transition">Voir sur la carte</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="hebergement">
-        <h2>Où se loger ?</h2>
-        <p>Voici quelques suggestions d’hébergement à proximité :</p>
-        <ul class="list">
-            <li>
-                <h3>Camping Paradis l'Escapade</h3>
-                <p>Adresse : Lieu dit Les Roussilloux, La grande lisse, 24520 Lamonzie-Montastruc</p>
-                <p>Tél : 0553572379</p>
-                <p><a href="https://www.campinglescapade.com/" target="_blank">Site web</a></p>
-            </li>
-            <li>
-                <h3>[Nom Hôtel 2]</h3>
-                <p>Adresse : [Adresse]</p>
-                <p>Tél : [Numéro]</p>
-                <p><a href="[Lien site web]" target="_blank">Site web</a></p>
-            </li>
-            <li>
-                <h3>[Nom Hôtel 3]</h3>
-                <p>Adresse : [Adresse]</p>
-                <p>Tél : [Numéro]</p>
-                <p><a href="[Lien site web]" target="_blank">Site web</a></p>
-            </li>
-        </ul>
+    <!-- Accommodation Section -->
+    <section class="py-20 bg-rose-100 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-rose-800 mb-4">Où se loger</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">Nous avons sélectionné pour vous deux options d'hébergement à proximité du lieu de réception.</p>
+                <div class="w-24 h-1 bg-rose-400 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Hotel 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="http://static.photos/hotel/640x360/1" alt="Hôtel des Roses" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-rose-700 mb-2">Hôtel des Roses</h3>
+                        <p class="text-gray-600 mb-4">À 5 minutes du château - Chambres à partir de 120€/nuit</p>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-gray-300 mr-2"></i>
+                            <span>4/5</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-rose-600 mr-2"></i>
+                                <span>Petit-déjeuner inclus</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-rose-600 mr-2"></i>
+                                <span>Navette gratuite vers le château</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-rose-600 mr-2"></i>
+                                <span>Piscine extérieure</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-2 bg-rose-600 text-white rounded-full hover:bg-rose-700 transition">Réserver</a>
+                    </div>
+                </div>
+                
+                <!-- Hotel 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="http://static.photos/hotel/640x360/2" alt="La Maison du Parc" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-rose-700 mb-2">La Maison du Parc</h3>
+                        <p class="text-gray-600 mb-4">À 10 minutes du château - Chambres à partir de 90€/nuit</p>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-yellow-400 mr-1"></i>
+                            <i data-feather="star" class="text-yellow-400 mr-2"></i>
+                            <span>5/5</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-rose-600 mr-2"></i>
+                                <span>Charmante maison d'hôtes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-rose-600 mr-2"></i>
+                                <span>Jardin privé</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-rose-600 mr-2"></i>
+                                <span>Parking gratuit</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-block px-6 py-2 bg-rose-600 text-white rounded-full hover:bg-rose-700 transition">Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="activites">
-        <h2>Explorer les environs</h2>
-        <p>Quelques suggestions d'activités à proximité :</p>
-        <ul class="list">
-            <li>
-                <h3>Les jardins de Marqueyssac</h3>
-                <p>Adresse : Les Jardins de Marqueyssac, 24220 Vézac</p>
-                <p><a href="http://www.marqueyssac.com/" target="_blank">Site web</a></p>
-            </li>
-            <li>
-                <h3>Château de Beynac</h3>
-                <p>Adresse : Le Château de Beynac, Place du château, 24220 Beynac-et-Cazenac</p>
-                <p><a href="http://www.chateau-beynac.com/" target="_blank">Site web</a></p>
-            </li>
-            <li>
-                <h3>Château de Castelnaud</h3>
-                <p>Adresse : Rte de la Monnaie, 24250 Castelnaud-la-Chapelle</p>
-                <p><a href="http://www.castelnaud.com/" target="_blank">Site web</a></p>
-            </li>
-        </ul>
+    <!-- Activities Section -->
+    <section id="activities" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-rose-800 mb-4">Activités dans la région</h2>
+            <p class="text-gray-700 max-w-2xl mx-auto">Découvrez quelques activités pour profiter pleinement de votre séjour.</p>
+            <div class="w-24 h-1 bg-rose-400 mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Activity 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                <img src="http://static.photos/travel/640x360/1" alt="Visite des vignobles" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-rose-700 mb-2">Visite des vignobles</h3>
+                    <p class="text-gray-600 mb-4">Découvrez les célèbres vignobles de la région avec dégustation de vins.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-rose-600 font-medium">À 15 min</span>
+                        <a href="#" class="text-rose-600 hover:text-rose-800 flex items-center">
+                            <span>En savoir plus</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Activity 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                <img src="http://static.photos/nature/640x360/2" alt="Randonnée en forêt" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-rose-700 mb-2">Randonnée en forêt</h3>
+                    <p class="text-gray-600 mb-4">Parcourez les magnifiques sentiers de la forêt domaniale de la Vallée.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-rose-600 font-medium">À 5 min</span>
+                        <a href="#" class="text-rose-600 hover:text-rose-800 flex items-center">
+                            <span>En savoir plus</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Activity 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                <img src="http://static.photos/cityscape/640x360/3" alt="Visite du vieux village" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-rose-700 mb-2">Visite du vieux village</h3>
+                    <p class="text-gray-600 mb-4">Explorez le charmant village médiéval avec ses ruelles pittoresques.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-rose-600 font-medium">À 10 min</span>
+                        <a href="#" class="text-rose-600 hover:text-rose-800 flex items-center">
+                            <span>En savoir plus</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>Pour toute question, contactez-nous : <a href="mailto:antoinedidier@hotmail.fr">antoinedidier@hotmail.fr</a></p>
+    <!-- Footer -->
+    <footer class="bg-rose-800 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold mb-4">Sophie & Pierre</h2>
+                <p class="max-w-lg mx-auto">Nous avons hâte de partager ce moment spécial avec vous !</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-rose-200 transition">
+                    <i data-feather="mail"></i>
+                </a>
+                <a href="#" class="hover:text-rose-200 transition">
+                    <i data-feather="phone"></i>
+                </a>
+                <a href="#" class="hover:text-rose-200 transition">
+                    <i data-feather="map-pin"></i>
+                </a>
+            </div>
+            <div class="text-center text-sm text-rose-200">
+                <p>© 2024 Antoine et Juliette </p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
 </body>
 </html>
-

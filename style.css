@@ -1,0 +1,55 @@
+/* Custom styles */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Hero section animation */
+.hero-section h1 {
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-section p {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-section div {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Custom shadow for cards */
+.shadow-lg {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Hover effect for activity cards */
+.hover\:shadow-xl:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
