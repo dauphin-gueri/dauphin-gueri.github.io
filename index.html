@@ -15,11 +15,11 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #555;
+            color: #6a9b6e; /* Vert clair et naturel */
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #f1f9f1; /* Fond très clair, doux */
         }
         header {
             text-align: center;
@@ -27,60 +27,85 @@
             background-color: #fff;
             border-bottom: 1px solid #eee;
             margin-bottom: 30px;
+            position: relative;
+            background-image: url('https://via.placeholder.com/1200x400/CCE6CC/FFFFFF?text=Mariage'); /* Exemple d'image d'arrière-plan */
+            background-size: cover;
+            background-position: center;
+        }
+        header h1, header p {
+            color: #6a9b6e;
+        }
+        header .date {
+            font-style: italic;
+            color: #8d9c77; /* Légèrement plus foncé pour la date */
+        }
+        header img {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
         }
         h1, h2 {
-            color: #8a6b6b;
-        }
-        .date {
-            font-style: italic;
-            color: #a38f8f;
+            color: #6a9b6e; /* Vert clair */
         }
         section {
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .lieu {
             margin-bottom: 15px;
         }
         .lieu h3 {
             margin-top: 0;
-            color: #8a6b6b;
+            color: #6a9b6e;
         }
         .map {
             height: 300px;
             width: 100%;
             margin: 15px 0;
             border: 0;
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         footer {
             text-align: center;
             padding: 20px 0;
             margin-top: 30px;
-            color: #888;
+            color: #8d9c77; /* Vert foncé pour le texte du footer */
             font-size: 0.9em;
         }
-        .hebergement-list {
+        .list {
             list-style-type: none;
             padding: 0;
         }
-        .hebergement-list li {
+        .list li {
             margin-bottom: 15px;
             padding-bottom: 15px;
             border-bottom: 1px solid #eee;
         }
-        .hebergement-list li:last-child {
+        .list li:last-child {
             border-bottom: none;
         }
         a {
-            color: #8a6b6b;
+            color: #6a9b6e;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+        }
+        .list li h3 {
+            color: #6a9b6e;
+        }
+        /* Animation de survol des liens */
+        a:hover {
+            color: #4c8d4b;
         }
     </style>
 </head>
@@ -88,6 +113,7 @@
     <header>
         <h1>Mariage Antoine et Juliette</h1>
         <p class="date">Samedi 27 Juin 2026</p>
+        <img src="https://via.placeholder.com/1200x250/CCE6CC/FFFFFF?text=Nos+joies+partagées" alt="Image de mariage">
     </header>
 
     <section id="ceremonie">
@@ -96,8 +122,7 @@
             <h3>Église Notre-Dame de l'Assomption</h3>
             <p>Adresse : Rue du Château Montastruc, 24520 Lamonzie-Montastruc</p>
             <p>17h</p>
-            <!-- Remplace l'URL ci-dessous par un lien Google Maps vers le lieu -->
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36585.37461915051!2d0.5788454202182521!3d44.905614335188446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aad7000d3ff089%3A0x802a0398d776b942!2s%C3%89glise%20Notre-Dame%20de%20l&#39;Assomption!5e0!3m2!1sfr!2sfr!4v1767183837978!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36585.37461915051!2d0.5788454202182521!3d44.905614335188446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aad7000d3ff089%3A0x802a0398d776b942!2s%C3%89glise%20Notre-Dame%20de%20l&#39;Assomption!5e0!3m2!1sfr!2sfr!4v1767183837978!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -107,7 +132,6 @@
             <h3>La Tissanderie</h3>
             <p>Adresse : La Tissanderie, Liorac-sur-Louyre, 24520</p>
             <p>Heure : 18h</p>
-            <!-- Remplace l'URL ci-dessous par un lien Google Maps vers le lieu -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d136105.92435971258!2d0.5685676851204634!3d45.00114387439279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ab297e52c1d9f5%3A0xdae5ed753b53b952!2sLa%20Tissanderie%20-%20Location%20de%20vacances%20de%20charme!5e1!3m2!1sfr!2sfr!4v1756658926070!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
@@ -115,7 +139,7 @@
     <section id="hebergement">
         <h2>Où se loger ?</h2>
         <p>Voici quelques suggestions d’hébergement à proximité :</p>
-        <ul class="hebergement-list">
+        <ul class="list">
             <li>
                 <h3>Camping Paradis l'Escapade</h3>
                 <p>Adresse : Lieu dit Les Roussilloux, La grande lisse, 24520 Lamonzie-Montastruc</p>
@@ -137,8 +161,31 @@
         </ul>
     </section>
 
+    <section id="activites">
+        <h2>Explorer les environs</h2>
+        <p>Quelques suggestions d'activités à proximité :</p>
+        <ul class="list">
+            <li>
+                <h3>Les jardins de Marqueyssac</h3>
+                <p>Adresse : Les Jardins de Marqueyssac, 24220 Vézac</p>
+                <p><a href="http://www.marqueyssac.com/" target="_blank">Site web</a></p>
+            </li>
+            <li>
+                <h3>Château de Beynac</h3>
+                <p>Adresse : Le Château de Beynac, Place du château, 24220 Beynac-et-Cazenac</p>
+                <p><a href="http://www.chateau-beynac.com/" target="_blank">Site web</a></p>
+            </li>
+            <li>
+                <h3>Château de Castelnaud</h3>
+                <p>Adresse : Rte de la Monnaie, 24250 Castelnaud-la-Chapelle</p>
+                <p><a href="http://www.castelnaud.com/" target="_blank">Site web</a></p>
+            </li>
+        </ul>
+    </section>
+
     <footer>
         <p>Pour toute question, contactez-nous : <a href="mailto:antoinedidier@hotmail.fr">antoinedidier@hotmail.fr</a></p>
     </footer>
 </body>
 </html>
+
